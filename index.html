@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asignatura: Programación Web</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- HEADER: Encabezado principal y navegación del sitio -->
+    <!-- Justificación: <header> se usa para presentar el encabezado y el menú principal -->
+    <header>
+        <h1>Programa Educativo: Ingeniería en Tecnologías de la Información</h1>
+        
+        <!-- Checkbox oculto para controlar el menú móvil -->
+        <input type="checkbox" id="mobile-menu-toggle" class="mobile-menu-checkbox">
+        
+        <!-- Label que actúa como botón hamburguesa -->
+        <label for="mobile-menu-toggle" class="mobile-menu-toggle" aria-label="Abrir menú">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </label>
+        
+        <nav class="desktop-nav">
+            <!-- Justificación: <nav> agrupa los enlaces de navegación -->
+            <ul>
+                <li><a href="#asignatura">Asignatura</a></li>
+                <li><a href="#proposito">Propósito</a></li>
+                <li><a href="#cuatrimestre">Cuatrimestre</a></li>
+                <li><a href="#unidades">Unidades</a></li>
+                <li><a href="#bibliografia">Bibliografía</a></li>
+                <li><a href="#multimedia">Multimedia</a></li>
+            </ul>
+        </nav>
+        
+        <!-- Menú móvil -->
+        <nav class="mobile-nav">
+            <div class="mobile-nav-header">
+                <h2>Menú</h2>
+                <label for="mobile-menu-toggle" class="mobile-nav-close" aria-label="Cerrar menú">
+                    <span>&times;</span>
+                </label>
+            </div>
+            <ul class="mobile-nav-list">
+                <li><a href="#asignatura" class="mobile-nav-link">Asignatura</a></li>
+                <li><a href="#proposito" class="mobile-nav-link">Propósito</a></li>
+                <li><a href="#cuatrimestre" class="mobile-nav-link">Cuatrimestre</a></li>
+                <li><a href="#unidades" class="mobile-nav-link">Unidades</a></li>
+                <li><a href="#bibliografia" class="mobile-nav-link">Bibliografía</a></li>
+                <li><a href="#multimedia" class="mobile-nav-link">Multimedia</a></li>
+            </ul>
+        </nav>
+        
+        <!-- Overlay para cerrar el menú -->
+        <label for="mobile-menu-toggle" class="mobile-nav-overlay"></label>
+    </header>
+
+    <!-- MAIN: Contenido central del documento -->
+    <!-- Justificación: <main> delimita el contenido principal de la página -->
+    <main>
+        <!-- SECTION: Información general -->
+        <!-- Justificación: <section> se utiliza para dividir el contenido en bloques temáticos -->
+        <section id="asignatura">
+            <h2>Nombre de la Asignatura</h2>
+            <article>
+                <!-- Justificación: <article> contiene una unidad de contenido independiente -->
+                <p><strong>Programación Web</strong></p>
+            </article>
+        </section>
+
+        <section id="proposito">
+            <h2>Propósito de Aprendizaje</h2>
+            <article>
+                <p>El alumno implementará sistemas empleando tecnologías web para extender la disponibilidad y los alcances de los servicios de la organización.</p>
+            </article>
+        </section>
+
+        <section id="cuatrimestre">
+            <h2>Cuatrimestre</h2>
+            <article>
+                <p><strong>Séptimo Cuatrimestre</strong></p>
+                <p>Total de horas: 75 (presenciales)</p>
+            </article>
+        </section>
+
+        <!-- UNIDADES -->
+        <section id="unidades">
+            <h2>Unidades de Aprendizaje</h2>
+
+            <article>
+                <h3>Unidad I. Introducción a los Sistemas Web</h3>
+                <p><em>Propósito esperado:</em> El alumno configurará entornos de trabajo para el desarrollo web.</p>
+                <h4>Temas:</h4>
+                <ul>
+                    <li>Modelo cliente-servidor, HTTP, HTTPS, URL, TCP/IP, FTP.</li>
+                    <li>Arquitecturas web: tecnologías del lado del cliente y servidor.</li>
+                    <li>Configuración de servidores de desarrollo y producción.</li>
+                </ul>
+            </article>
+
+            <article>
+                <h3>Unidad II. Programación del Lado del Cliente</h3>
+                <p><em>Propósito esperado:</em> El alumno elaborará documentos responsivos y dinámicos del lado del cliente para el despliegue del contenido del sistema web.</p>
+                <h4>Temas:</h4>
+                <ul>
+                    <li>Maquetación con HTML5 y elementos semánticos.</li>
+                    <li>Hojas de estilo CSS3 y diseño responsivo.</li>
+                    <li>Programación con JavaScript.</li>
+                </ul>
+            </article>
+
+            <article>
+                <h3>Unidad III. Programación del Lado del Servidor</h3>
+                <p><em>Propósito esperado:</em> El alumno realizará la programación y monitoreo de aplicaciones en servidores web para complementar la funcionalidad del sistema.</p>
+                <h4>Temas:</h4>
+                <ul>
+                    <li>Lenguajes del lado del servidor (PHP, Python, .NET, JEE).</li>
+                    <li>Interfaz de programación de aplicaciones (API) y arquitectura de tres niveles.</li>
+                    <li>Monitoreo y estadísticas del sistema web.</li>
+                </ul>
+            </article>
+
+            <article>
+                <h3>Unidad IV. Autenticación de Usuarios</h3>
+                <p><em>Propósito esperado:</em> El alumno implementará mecanismos de autenticación de usuarios para el acceso al sistema web.</p>
+                <h4>Temas:</h4>
+                <ul>
+                    <li>Autenticación e interfaces seguras.</li>
+                    <li>Manejo de excepciones en lenguajes de programación web.</li>
+                </ul>
+            </article>
+        </section>
+
+        <!-- ASIDE: información complementaria -->
+        <!-- Justificación: <aside> se usa para mostrar contenido relacionado, no principal -->
+        <aside>
+            <h3>Competencia a la que contribuye</h3>
+            <p>Desarrollar soluciones innovadoras de integración de tecnologías de la información mediante metodologías de desarrollo de software, diseño de base de datos, seguridad de la información y administración de proyectos.</p>
+        </aside>
+
+        <!-- BIBLIOGRAFÍA -->
+        <section id="bibliografia">
+            <h2>Referencias Bibliográficas</h2>
+            <ul>
+                <li>Prettyman, S. (2016). <em>Learn PHP 7, Object-Oriented Modular Programming using HTML5, CSS3, JavaScript, XML, JSON and MySQL</em>. Apress.</li>
+                <li>Sanders, W. (2013). <em>Learning PHP Design Patterns</em>. O’Reilly.</li>
+                <li>Melé, A. (2015). <em>Django by Example</em>. Packt Pub.</li>
+                <li>Bonilla, P. C. (2014). <em>Diseño Web Adaptativo</em>. Anaya Multimedia.</li>
+            </ul>
+        </section>
+
+        <!-- MULTIMEDIA -->
+        <section id="multimedia">
+            <h2>Material Multimedia</h2>
+
+            <figure>
+                <img src="imagenes/graduacion.png" alt="Representación del desarrollo web">
+                <figcaption>EXTIOS DE GRADUADOS EXITOSOS</figcaption>
+            </figure>
+
+            <figure>
+                <img src="imagenes/redes.jpg" alt="Ejemplo de programación web">
+                <figcaption>ALUMNOS REALIZANDO PROYECTOS</figcaption>
+            </figure>
+
+            <figure>
+                <video controls width="600">
+                    <source src="videos/upsin.webm" type="video/webm">
+                    Tu navegador no soporta el elemento de video.
+                </video>
+                <figcaption>VIDEO INTRODUCTORIO</figcaption>
+            </figure>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <!-- Justificación: <footer> define el pie de página con información final -->
+    <footer>
+        <p>© 2025 Universidad Politecnica De Sinaloa — Actividad "One Page Semántica"</p>
+        <p>El estudiante deberá analizar el tipo de contenido e identificar qué etiqueta HTML5 es la más adecuada, justificando su elección dentro del código o en un texto anexo.</p>
+    </footer>
+</body>
+</html>

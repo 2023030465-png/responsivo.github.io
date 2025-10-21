@@ -1,0 +1,295 @@
+
+:root {
+    --azul-oscuro: #0d1b4c;
+    --azul-medio: #1e3a8a;
+    --azul-claro: #c7dbff;
+    --blanco: #ffffff;
+    --gris-claro: #f3f6fb;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background-color: var(--gris-claro);
+    color: #222;
+    margin: 0;
+    line-height: 1.6;
+}
+
+
+header {
+    background: linear-gradient(180deg, var(--azul-oscuro), var(--azul-medio));
+    color: var(--blanco);
+    text-align: center;
+    padding: 30px 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.9em;
+}
+
+nav ul {
+    list-style: none;
+    margin: 15px 0 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 12px;
+}
+
+nav ul li a {
+    color: var(--azul-claro);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: var(--blanco);
+    border-bottom: 2px solid var(--blanco);
+}
+
+
+main {
+    max-width: 1100px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+section {
+    background-color: var(--blanco);
+    margin-bottom: 40px;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+section h2 {
+    color: var(--azul-medio);
+    border-left: 6px solid var(--azul-medio);
+    padding-left: 10px;
+    margin-bottom: 15px;
+}
+
+article h3 {
+    color: var(--azul-oscuro);
+}
+
+
+aside {
+    background-color: var(--azul-claro);
+    border-left: 6px solid var(--azul-medio);
+    padding: 20px;
+    margin-bottom: 40px;
+    border-radius: 12px;
+}
+
+
+figure {
+    text-align: center;
+    margin: 25px auto;
+}
+
+figure img, figure video {
+    max-width: 90%;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+}
+
+figcaption {
+    margin-top: 8px;
+    font-size: 0.9em;
+    color: #444;
+}
+
+
+footer {
+    background-color: var(--azul-oscuro);
+    color: var(--blanco);
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9em;
+}
+
+/* ===== ESTILOS PARA MENÚ MÓVIL (CSS PURO) ===== */
+
+/* Ocultar el checkbox */
+.mobile-menu-checkbox {
+    display: none;
+}
+
+/* Botón hamburguesa - oculto por defecto */
+.mobile-menu-toggle {
+    display: none;
+    cursor: pointer;
+    padding: 10px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1001;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 30px;
+}
+
+.hamburger-line {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: var(--blanco);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* Animación del botón hamburguesa cuando el checkbox está marcado */
+.mobile-menu-checkbox:checked + .mobile-menu-toggle .hamburger-line:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+}
+
+.mobile-menu-checkbox:checked + .mobile-menu-toggle .hamburger-line:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-menu-checkbox:checked + .mobile-menu-toggle .hamburger-line:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* Menú móvil - oculto por defecto */
+.mobile-nav {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 280px;
+    height: 100vh;
+    background: linear-gradient(180deg, var(--azul-oscuro), var(--azul-medio));
+    z-index: 1000;
+    transition: right 0.3s ease;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Mostrar menú cuando el checkbox está marcado */
+.mobile-menu-checkbox:checked ~ .mobile-nav {
+    right: 0;
+}
+
+.mobile-nav-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.mobile-nav-header h2 {
+    color: var(--blanco);
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.mobile-nav-close {
+    color: var(--blanco);
+    font-size: 2em;
+    cursor: pointer;
+    padding: 5px;
+    line-height: 1;
+    background: none;
+    border: none;
+}
+
+.mobile-nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mobile-nav-list li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mobile-nav-link {
+    display: block;
+    color: var(--azul-claro);
+    text-decoration: none;
+    padding: 18px 20px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.mobile-nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--blanco);
+    padding-left: 30px;
+}
+
+/* Overlay para cerrar el menú */
+.mobile-nav-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    cursor: pointer;
+}
+
+/* Mostrar overlay cuando el checkbox está marcado */
+.mobile-menu-checkbox:checked ~ .mobile-nav-overlay {
+    opacity: 1;
+}
+
+/* Media queries para dispositivos móviles */
+@media (max-width: 768px) {
+    /* Mostrar botón hamburguesa en móvil */
+    .mobile-menu-toggle {
+        display: flex;
+    }
+    
+    /* Ocultar navegación de escritorio en móvil */
+    .desktop-nav {
+        display: none;
+    }
+    
+    /* Mostrar menú móvil en dispositivos móviles */
+    .mobile-nav {
+        display: block;
+    }
+    
+    .mobile-nav-overlay {
+        display: block;
+    }
+    
+    /* Ajustar header para móvil */
+    header {
+        position: relative;
+        padding: 20px 15px;
+    }
+    
+    header h1 {
+        font-size: 1.4em;
+        margin-right: 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    .mobile-nav {
+        width: 100%;
+        right: -100%;
+    }
+    
+    /* Cuando el checkbox está marcado en pantallas pequeñas */
+    .mobile-menu-checkbox:checked ~ .mobile-nav {
+        right: 0;
+    }
+    
+    header h1 {
+        font-size: 1.2em;
+    }
+}
